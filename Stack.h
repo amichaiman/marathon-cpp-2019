@@ -12,8 +12,7 @@ using namespace std;
 template <typename T>
 class Stack {
 public:
-    Stack& Stack(const Stack& rhs);
-    Stack& operator=(const Stack& rhs);
+    explicit Stack();
     bool push(T& elem);
     T& top() const throw(EmptyStackException);
     void pop() throw(EmptyStackException);
