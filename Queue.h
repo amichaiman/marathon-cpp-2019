@@ -25,7 +25,6 @@ private:
     Stack<T> a,b;
 
     void transferAtoB();
-
     void transferBtoA();
 };
 
