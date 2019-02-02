@@ -14,7 +14,9 @@ private:
     int val;
     int base;
 };
+
 const char e_digits[] = "0123456789abcdefghijklmnopqrstuvwxyz";
+
 std::ostream& operator<<(std::ostream& output, Based b) {
     const int BUF_LEN = 128;
     char buffer[BUF_LEN];
