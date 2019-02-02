@@ -19,6 +19,19 @@ public:
     int count() const;
     int size() const;
     operator string() const;
+    class BitSetIterator {
+    public:
+        BitSetIterator& operator[](const int index);
+        BitSetIterator& operator++();
+        BitSetIterator& operator--();
+        bool operator*() const;
+        bool operator==(const BitSetIterator& rhs) const;
+        bool operator!=(const BitSetIterator& rhs) const;
+    private:
+        int index;
+    };
+    BitSetIterator begin();
+    BitSetIterator end();
 private:
     static const int BITS_IN_BYTE = 8;
     int array[N/(BITS_IN_BYTE*sizeof(int))];
